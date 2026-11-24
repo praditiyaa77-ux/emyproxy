@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Emy Proxy"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Terputus"
+            android:textColor="#FF6B6B"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="IP: -"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#1C1626"
+            android:fontFamily="monospace"
+            android:gravity="top"
+            android:hint="Paste config WireGuard (.conf) di sini"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:minLines="9"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#777777"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Import file .conf" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="12dp"
+            android:text="CONNECT"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>
