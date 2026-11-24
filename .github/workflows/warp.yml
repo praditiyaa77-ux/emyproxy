@@ -1,0 +1,18 @@
+name: Generate WARP Config
+on: workflow_dispatch
+jobs:
+  warp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install wgcf and generate config
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download --repo ViRb3/wgcf --pattern '*linux_amd64' --output wgcf
+          chmod +x wgcf
+          ./wgcf register --accept-tos
+          ./wgcf generate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: warp-config
+          path: wgcf-profile.conf
