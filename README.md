@@ -1,3 +1,4 @@
 # Emy Proxy
-VPN Android (WireGuard) - tempel/import config .conf lalu Connect.
-Build: push ke GitHub, buka tab Actions, unduh artifact EmyProxy-APK.
+VPN Android: mode WireGuard (config .conf) dan V2Ray/Xray (link vless/vmess/trojan/ss).
+Build: push ke GitHub, tab Actions otomatis build dan publish APK ke Releases.
+Core Xray diunduh otomatis dari 2dust/AndroidLibXrayLite saat build.
